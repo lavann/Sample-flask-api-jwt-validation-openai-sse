@@ -1,0 +1,76 @@
+# Flask Azure OpenAI Chat Application
+
+This Flask application integrates with Azure OpenAI to provide chat completions, offering an interface for users to interact with an AI model. The application handles authentication via JWT tokens and utilizes Azure OpenAI's API to process and respond to user messages.
+
+## Features
+
+- User authentication using JWT tokens.
+- Integration with Azure OpenAI for generating chat completions.
+- Custom error handling for a streamlined API response structure.
+- Secure API key storage and application configuration.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.8 or newer.
+- Flask 2.x
+- An Azure account with access to Azure OpenAI services.
+
+### Installation
+
+1. Clone the repository to your local machine:
+
+2. Navigate to the project directory:
+
+3. Install required Python packages:
+
+4. Set up your environment variables for Azure OpenAI credentials and other configurations (see Configuration section below).
+
+### Configuration
+
+Set the following environment variables before running the application:
+
+- `AZURE_OPENAI_KEY`: Your Azure OpenAI API key.
+- `AZURE_OPENAI_ENDPOINT`: The endpoint URL for Azure OpenAI services.
+- `FLASK_APP_SECRET`: A secret key for your Flask application.
+
+You can set these variables in a `.env` file or export them directly in your shell.
+
+### Running the Application
+
+To start the Flask development server, run:
+
+
+This will serve your application at `http://127.0.0.1:5000`.
+
+## Usage
+
+Once the application is running, authenticated users can send messages to `/send` endpoint, which will return chat completions from Azure OpenAI.
+
+## Development
+
+### Structure
+
+- `app_rest_api.py`: The main Flask application file.
+- `InvalidAuth.py`: Defines a custom exception for authentication errors.
+- `jwt_validator.py`: Contains logic for JWT token validation.
+- `open_ai_chat_completion.py`: Handles communication with Azure OpenAI for chat completions.
+
+### Adding New Features
+
+To add new features, consider the current application structure and where your feature best fits. Ensure all new endpoints are secured with JWT authentication where necessary.
+
+## Contributing
+
+Contributions to this project are welcome! Please fork the repository, create a feature branch, and submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- Flask for the web framework.
+- Azure OpenAI for the chat completion service.
+- PyJWT for handling JWT tokens.

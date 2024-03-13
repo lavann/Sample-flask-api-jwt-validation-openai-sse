@@ -1,0 +1,10 @@
+openai==1.12.0
+flask==3.0.0
+Werkzeug==3.0.1
+flask-socketio
+flask_cors
+pyjwt
+pyjwt[crypto]
+markdown
+requests
+cryptography
